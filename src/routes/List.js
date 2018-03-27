@@ -4,7 +4,7 @@ import List from '../components/List';
 import Add from '../components/Add';
 import styles from './List.css';
 
-const Lists = ({dispatch, lists, inputs}) => {
+const Lists = ({ dispatch, lists, inputs }) => {
   function handleDelete(id) {
     dispatch({
       type: 'lists/delete',
@@ -28,15 +28,20 @@ const Lists = ({dispatch, lists, inputs}) => {
 
   return (
     <div>
-      <Add />
-
+      <Add onAdd={handleAdd} onChange={handleChange} input={inputs.input}/>
+      <br/>
+      <hr/>
+      <h2>List of Products</h2>
+      <br/>
+      <List onDelete={handleDelete} lists={lists}/>
     </div>
-  )
-
+  );
 };
 
 function mapStateToProps() {
-  return {};
+  return ({ inputs, lists }) => ({
+    inputs, lists,
+  });
 }
 
 export default connect(mapStateToProps)(List);

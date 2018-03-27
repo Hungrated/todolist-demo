@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Table, Popconfirm, Button } from 'antd';
 
-const List = ({onDelete, lists}) => {
+const List = ({ onDelete, lists }) => {
   const columns = [
     {
       title: 'ID',
@@ -24,7 +24,7 @@ const List = ({onDelete, lists}) => {
     },
   ];
   return (
-    <Table dataSource={lists} columns={columns} pagination={{pageSize: 6}}/>
+    <Table dataSource={lists} columns={columns} pagination={{ pageSize: 6 }}/>
   );
 };
 

@@ -1,4 +1,3 @@
-
 export default {
 
   namespace: 'example',
@@ -11,7 +10,7 @@ export default {
   },
 
   effects: {
-    *fetch({ payload }, { call, put }) {  // eslint-disable-line
+    * fetch({ payload }, { call, put }) {  // eslint-disable-line
       yield put({ type: 'save' });
     },
   },

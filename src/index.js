@@ -2,7 +2,18 @@ import dva from 'dva';
 import './index.css';
 
 // 1. Initialize
-const app = dva();
+const app = dva({
+  initialState: {
+    lists: [
+      { name: 'dva', id: 1 },
+      { name: 'antd', id: 2 },
+    ],
+  },
+});
+
+app.model(require('./models/list'));
+
+app.model(require('./models/add'));
 
 // 2. Plugins
 // app.use({});
