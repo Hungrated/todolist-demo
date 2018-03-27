@@ -44,4 +44,4 @@ function mapStateToProps() {
   });
 }
 
-export default connect(mapStateToProps)(List);
+export default connect(mapStateToProps)(Lists);

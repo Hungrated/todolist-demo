@@ -10,13 +10,14 @@ const Add = (onAdd, onChange, input) => {
              value={input}
              onChange={onChange}
       />
+      <Button type={'primary'} onClick={onAdd}>添加</Button>
     </div>
   );
 };
 
 Add.propTypes = {
   onAdd: PropTypes.func.isRequired,
-  input: PropTypes.string.isReuired,
+  input: PropTypes.string.isRequired,
 };
 
 export default Add;
