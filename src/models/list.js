@@ -1,6 +1,6 @@
 export default {
   namespace: 'lists',
-  state: [],
+  state: {},
   reducers: {
     add(state, { payload: name }) {
       let id = state.reduce((prev, cur) => (prev.id > cur.id ? prev : cur).id);

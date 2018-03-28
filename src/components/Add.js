@@ -5,10 +5,11 @@ import { Input, Icon, Button } from 'antd';
 const Add = (onAdd, onChange, input) => {
   return (
     <div>
-      <Input placeholder={'Enter your username'}
-             prefix={<Icon type={'user'}/>}
-             value={input}
-             onChange={onChange}
+      <Input
+        placeholder={'Enter your username'}
+        prefix={<Icon type={'user'}/>}
+        value={input}
+        onChange={onChange}
       />
       <Button type={'primary'} onClick={onAdd}>添加</Button>
     </div>

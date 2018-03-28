@@ -12,7 +12,7 @@ const Lists = ({ dispatch, lists, inputs }) => {
     });
   }
 
-  function handleAdd(id) {
+  function handleAdd() {
     dispatch({
       type: 'lists/add',
       payload: inputs.input,
@@ -22,7 +22,7 @@ const Lists = ({ dispatch, lists, inputs }) => {
   function handleChange(e) {
     dispatch({
       type: 'inputs/change',
-      payload: e.target.value,
+      payload: () => e.target.value,
     });
   }
 
