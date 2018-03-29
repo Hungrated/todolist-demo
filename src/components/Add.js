@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Input, Icon, Button } from 'antd';
 
-const Add = (onAdd, onChange, input) => {
+const Add = ({ onAdd, onChange, input }) => {
   return (
     <div>
       <Input

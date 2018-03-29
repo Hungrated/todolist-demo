@@ -20,9 +20,10 @@ const Lists = ({ dispatch, lists, inputs }) => {
   }
 
   function handleChange(e) {
+    console.log(e.target.value)
     dispatch({
       type: 'inputs/change',
-      payload: () => e.target.value,
+      payload: e.target.value,
     });
   }
 
